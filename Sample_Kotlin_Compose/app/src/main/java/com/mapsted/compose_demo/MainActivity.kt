@@ -33,14 +33,11 @@ class MainActivity : ComponentActivity(), MapstedCoreApiProvider {
         private val TAG: String = MainActivity::class.java.simpleName
     }
 
-    private var tActivityStart = 0L
-    private var tStartInitMapsted = 0L
-    private var tStartDownload = 0L
-    private var tDownloadFinished = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //Initialize Mapsted Core  sdk
         coreApi = (application as DemoApplication).getCoreApi(this)
 
         // Keep splash screen until property is downloaded
@@ -58,8 +55,6 @@ class MainActivity : ComponentActivity(), MapstedCoreApiProvider {
             }
         }
 
-        tActivityStart = System.currentTimeMillis()
-
         Log.d(TAG, "onCreate")
         setupMapstedSdk()
     }
@@ -69,10 +64,9 @@ class MainActivity : ComponentActivity(), MapstedCoreApiProvider {
         super.onDestroy()
     }
 
+
+//     This function is used for setting up the Mapsted sdks
     private fun setupMapstedSdk() {
-
-        tStartInitMapsted = System.currentTimeMillis()
-
         val params = CoreParams.newBuilder()
             // Add additional custom content here
             .build()
