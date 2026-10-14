@@ -2,7 +2,7 @@
 
 A native Android sample application demonstrating how to integrate the **Mapsted Mobile SDK**
 (indoor positioning, mapping, wayfinding, and location-based services) into an Android app. Built
-against the current **Mapsted Android SDK 26.9.1** release.
+against the current **Mapsted Android SDK 26.10.3** release.
 
 A sample Mapsted licence file is included, providing access to the **Square One Shopping Centre**
 (propertyId `504`) so you can run the app out of the box.
@@ -16,7 +16,7 @@ A sample Mapsted licence file is included, providing access to the **Square One 
 | JDK | 17 |
 
 The Mapsted Android artifacts (`com.mapsted:android-sdk-core`, `android-sdk-map`, `android-sdk-ui`
-`26.9.1`) are resolved from the Mapsted Maven repository
+`26.10.3`) are resolved from the Mapsted Maven repository
 `https://mapstedhq.github.io/mapsted-android-maven` (already configured in the sample's Gradle files).
 
 ## Setup
